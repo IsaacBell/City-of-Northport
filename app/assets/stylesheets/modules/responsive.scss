@@ -1,0 +1,45 @@
+@mixin mini() { @media all and (max-width: $break-small) { @content }}
+@mixin small() { @media all and (max-width: $break-medium) { @content }}
+@mixin medium() { @media all and (min-width: $break-medium) and (max-width: $break-large) { @content }}
+@mixin big()   { @media all and (min-width: $break-medium) { @content }}
+@mixin breakpx( $min, $max ) {
+  @media all and (min-width: $min) and (max-width: $max) { @content }
+}
+
+@mixin bgcover( $url ) { 
+    background-image: url(' #{$url} '); 
+    -ms-behavior: url('/bg.htc');
+    background-size: cover; 
+    background-position: center center; 
+    background-repeat: no-repeat; 
+}
+
+.conceal {
+  @include big {
+    display: none !important;
+  }
+  @include small {
+    display: inherit;
+  }
+}
+
+.reveal {
+  @include big {
+    display: inherit;
+  }
+  @include small {
+    display: none !important;
+  }
+}
+
+.reveal-m {
+  @include big {
+    display: inherit;
+  }
+  @include small {
+    display: none !important;
+  }
+  @include medium {
+    display: none !important;
+  }
+}

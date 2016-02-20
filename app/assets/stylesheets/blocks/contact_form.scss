@@ -1,0 +1,62 @@
+.contact-form-block {
+	padding: 40px 0 50px 0;
+	background: $color-main; 
+	color: #fff;
+	text-align: center; 
+	.constrain {
+		max-width: 750px;
+		.unit1of3, .unit1of1 {
+			@include small {
+				padding-left: 2% !important;
+				padding-right: 2% !important; 
+			}
+		}
+		.unit1of1 {
+			margin-top: 10px;
+		}
+	}
+	.placeholder_js {
+		color: #fff !important;
+	}
+	input, textarea {
+		width: 100%;
+	}
+	.text {
+		padding: 0 2%;
+		.section-title {
+			font-size: 22px;
+			margin-bottom: 18px;
+		}
+		.content {
+			font-size: 14px;
+			width: 80%;
+			margin: 0 auto 24px auto;
+			@include small {
+				width: 100%;
+			}
+		}
+	}
+	form {
+		.bottom {
+			.field {
+				float: left;
+				text-align: left;
+				input[type=checkbox] {
+					margin-right: 5px;
+					float: left;
+					display: inline;
+					width: 13px;
+				}
+				span {
+					font-size: 13px;
+				}
+			}
+			.btn {
+				float: right;
+			}
+			@include small {
+				padding: 10px 2% 0 2%;
+			}
+		}
+	}
+}

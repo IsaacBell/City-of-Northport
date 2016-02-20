@@ -1,0 +1,13 @@
+<%#
+  child blocks:
+    left : block
+    right : block
+%>
+<div class="grid-row">
+  <div class="unit unit1of3">
+    <%== block.render 'left', local_assigns %>
+  </div>
+  <div class="unit unit2of3">
+    <%== block.render 'right', local_assigns %>
+  </div>
+</div>

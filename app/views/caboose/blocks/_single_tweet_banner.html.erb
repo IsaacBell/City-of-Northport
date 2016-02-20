@@ -1,0 +1,27 @@
+<% un = ApplicationHelper.site_config(@site.id, 'twitter_username') %>
+<% if !un.blank? %>
+  <% tweet = Twittery.latest_tweets(un, 1).nil? ? nil : Twittery.latest_tweets(un, 1).first %>
+  <% if tweet %>
+    <div class="single-tweet-banner" id="block_<%= block.id %>">
+      <div class="constrain">
+        <a class="icon-twitter colored" href="http://www.twitter.com/<%= un %>" target="_blank"></a>
+        <span class="tweet-content">
+          <%== Twittery.auto_link(tweet.text) %>
+        </span>
+        <span class="tweet-time">
+          <%= time_ago_in_words(tweet.created_at) %> ago
+        </span>
+      </div>
+    </div>
+  <% end %>
+<% else %>
+  <% if editing %>
+    <div class="single-tweet-banner" id="block_<%= block.id %>">
+      <div class="constrain">
+        <span class="tweet-content">
+          Twitter username is not set. Please set in Admin -> Pages -> Site Configuration.
+        </span>
+      </div>
+    </div>
+  <% end %>
+<% end %>

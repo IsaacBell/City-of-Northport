@@ -1,0 +1,51 @@
+input[type=email],
+input[type=text],
+input[type=password],
+textarea {
+  background: $input-bg-color; 
+  -webkit-border-radius: $input-border-radius; 
+  -moz-border-radius: $input-border-radius; 
+  -ms-border-radius: $input-border-radius; 
+  -o-border-radius: $input-border-radius; 
+  border-radius: $input-border-radius; 
+  border-style: solid;
+  color: $input-font-color;
+  font: $input-font; 
+  border-width: $input-border-width;
+  border-color: $input-border-color;
+  -webkit-appearance: none; 
+  font-size: $input-font-size; 
+  padding: 7px 8px 5px 8px;
+  font-weight: 600;
+  font-style: italic; 
+  line-height: 25px;
+  &:focus {
+    outline-width: 3px;
+    outline-offset: -2px;
+    outline-color: $color-main;
+  }
+}
+
+p.note {
+  background: #000;
+  display: inline-block;
+  padding: 6px 30px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: 300;
+  font-size: 14px;
+  margin-top: 15px;
+  &.success {
+    background: #4CBA60;
+  }
+  &.error {
+    background: #B16060; 
+  }
+  &.loading {
+    background: #6077B1; 
+  }
+}

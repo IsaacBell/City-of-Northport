@@ -1,0 +1,23 @@
+<div id="block_<%= block.id %>">
+  <div class="home-calendar">
+    <div class="section">
+      <h4 class="top-title">Calendar</h4>
+      <div class="cal-icon">
+        <span class="number">2</span><br />
+        <span class="day">Wednesday</span>
+      </div>
+      <img src="//d3bx2wzktj6bct.cloudfront.net/assets/calendar.jpg" alt="Calendar" /> 
+      <h5 class="upcoming-events">Upcoming Events</h5>
+    </div>
+
+    <% (1..3).each do %>
+      <div class="news-post">
+        <h6 class="title">News Title</h6>
+        <div class="content">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean imperdiet in metus ut cursus. Donec interdum, metus ut rutrum convallis, sapien massa volutpat odio, eu porttitor lacus elit ac tellus. Morbi tincidunt ante sit amet nibh lobortis ante orci.  Morbi tincidunt ante sit amet nibh lobortis ante orci.</p>
+        </div>
+        <a href="#" class="btn red">Read More</a>
+      </div>
+    <% end %>
+  </div><!-- .home-calendar -->
+</div>

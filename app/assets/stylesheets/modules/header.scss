@@ -1,0 +1,138 @@
+.header {
+  width: 100%; 
+  background: rgba(46,62,79,0.6); 
+  position: absolute;
+  top: 0; 
+  left: 0; 
+  padding: 20px 0;
+  font-size: 16px;
+  z-index: 100; 
+  line-height: 20px;
+  a {
+    color: #b8b8b8;
+    &:hover {
+      color: $color-white;
+      text-decoration: none; 
+    }
+  }
+  ul {
+    list-style-type: none; 
+    li {
+      color: #b8b8b8;
+      display: inline-block;
+      &:after {
+        content: " | "; 
+        padding: 0 6px;
+      }
+      &:last-of-type:after {
+        content: ""; 
+      }
+    }
+  }
+  .left {
+    font-family: "Myriad Pro" sans-serif;
+    float: left;
+    h1 {
+      font-family: "Josefin Slab", sans-serif;  
+      font-weight: 800;
+      margin-bottom: 0;
+      color: $color-white;
+      @include small {
+        font-size: 1.5em;
+        padding-top: 5px;
+      }
+    }
+  }
+  .right {
+    font-family: "Josefin Slab", sans-serif;  
+    font-weight: 600;
+    float: right;
+  }
+  #show_menu {
+    float: right;
+    img {
+      width: 40px;
+    }
+  }
+  @include small {
+    position: fixed;
+    padding: 5px 10px 2px 0;
+    background: #2e3e4f;
+  }
+  &.subpage {
+    background: #2e3e4f;
+    padding: 10px 0 0 0; 
+    border-bottom: 1px solid $color-white; 
+    position: relative;
+    @include small {
+      .top_nav {
+        position: fixed;
+        top: 0;
+        left: 0; 
+        height: 52px;
+        background: #2e3e4f;
+        z-index: 1000;
+        padding: 7px 2%;
+      }
+    }
+    ul {
+      li {
+        &:nth-of-type(3):after {
+          content: ""; 
+        }
+      }
+    }
+    .left {
+      h1 {
+        font-family: "Josefin Slab", sans-serif;  
+        font-weight: 800;
+        margin-bottom: 0; 
+        color: $color-white;
+        @include small {
+          font-size: 1.5em;
+          padding-top: 5px;
+        }
+      }
+    }
+    .right {
+      max-width: 320px;
+      text-align: right;
+      font-size: 15px;
+    }
+    .banner-links {
+      margin-top: 10px;
+      @include small {
+        margin-top: 42px;
+      }
+      background: #772626; 
+      border-top: 1px solid $color-white;
+      .sub-nav {
+        float: right;
+        padding: 10px 0 8px 0;
+        a {
+          font-family: "Josefin Slab", serif;
+          font-weight: 600;
+          color: #d0d0d0;
+          &:hover {
+            color: $color-white;
+            text-decoration: none; 
+          }
+        }
+        ul {
+          list-style-type: none; 
+          li {
+            color: #b8b8b8;
+            display: inline-block;
+            &:after {
+              content: " | "; 
+              padding: 0 6px;
+            }
+            &:last-of-type:after {
+              content: ""; 
+            }
+          }
+        }
+      }
+    }
+  }
+}

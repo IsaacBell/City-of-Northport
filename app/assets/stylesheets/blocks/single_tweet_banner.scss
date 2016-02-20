@@ -1,0 +1,44 @@
+.single-tweet-banner {
+  padding: 14px 2% 20px 2%;
+  background: $color-dark;
+  color: $color-light;
+  text-align: center; 
+  .icon-twitter {
+    position: relative;
+    top: 6px;
+    font-size: 22px;
+    color: $color-main !important;
+    transition: color 500ms ease;
+    &:hover {
+      color: shade($color-main, 10%) !important; 
+    }
+  }
+  .tweet-content {
+    font-style: italic;
+    font-size: 14px;
+    &::before {
+      content: open-quote;
+      position: relative;
+      left: 2px;
+    }
+    &::after {
+      content: close-quote;
+      position: relative;
+      right: 2px;
+    }
+    a {
+      color: $color-main;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  .tweet-time {
+    color: $color-alt;
+    &::before {
+      content: " - ";
+    }
+    font-size: 12px;
+  }
+}

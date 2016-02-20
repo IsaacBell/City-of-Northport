@@ -1,0 +1,115 @@
+.sidebar_content_wrapper {
+  .left-sidebar {
+    width: 100%;
+    @include big {
+      border-right: 1px solid #d0d0d0;
+    }
+    .arrow {
+      width: 18px;
+      height: 18px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      position: absolute;
+      right:10px;
+      top: 14px;
+      &.down_arrow {
+        background-image: url('//d3bx2wzktj6bct.cloudfront.net/assets/icons/down_arrow.png'); 
+      }
+      &.up_arrow {
+        background-image: url('//d3bx2wzktj6bct.cloudfront.net/assets/icons/up_arrow.png'); 
+      }
+    }
+    .section-heading {
+      width: 100%; 
+      background: $color-white;
+      padding: 10px; 
+      border-bottom: 1px solid #d0d0d0;
+      position: relative;
+      h4 {
+        font-size: 20px;
+        font-family: "Josefin Slab", serif;
+        font-weight: 700;
+        margin-bottom: 0; 
+      }
+    }
+    .menu {
+      padding: 20px 0; 
+      ul {
+        padding-left: 10px;
+        li {
+          a {
+            display: block;
+            width: 100%; 
+            padding: 7px 0 7px 10px; 
+            height: 100%; 
+            font-family: "Josefin Slab", serif;
+            font-weight: 600;
+            color: #777d83;
+            font-size: 16px;
+            &:hover {
+              background: #d9dbdc;
+              text-decoration: none;  
+            }
+          }
+        }
+      }
+    }
+    .calendar {
+      background: $color-white; 
+      overflow: auto;
+      padding: 10px 0 20px 10px;
+      h4 {
+        font-size: 20px;
+        font-family: "Josefin Slab", serif;
+        font-weight: 700;
+        margin-bottom: 10px; 
+      }
+      img {
+        float: right;
+        width: 90%;
+      }
+    }
+    @include small {
+      .section-heading, .menu, .calendar {
+        text-align: center; 
+      }
+      .menu {
+        padding: 8px 0; 
+      }
+      .calendar img {
+        float: none; 
+        max-width: 250px;
+      }
+      .calendar {
+        display: none; 
+      }
+    }
+    @include big {
+      width: 30%;
+      float: left;
+    }
+  }
+  .page_wrap {
+    width: 100%;
+    .top-page-title {
+      width: 100%; 
+      background: $color-white;
+      padding: 10px; 
+      border-bottom: 1px solid #d0d0d0;
+      font-size: 20px;
+      font-family: "Josefin Slab", serif;
+      font-weight: 700;
+      margin-bottom: 0; 
+      line-height: 24px;
+    }
+    @include small {
+      .top-page-title {
+        text-align: center; 
+      }
+    }
+    @include big {
+      width: 70%;
+      float: right;
+    }
+  }
+}

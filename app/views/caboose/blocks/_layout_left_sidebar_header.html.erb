@@ -1,0 +1,93 @@
+<div class="header subpage" id="block_<%= block.id %>">
+  <div class="constrain top_nav">
+    <div class="left">
+      <a href="/"><h1>The City of Northport</h1></a>
+    </div>
+    <div class="right reveal">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Agenda Minutes</a></li>
+        <li><a href="#">Public Notices</a></li>
+        <li><a href="#">Pay My Water Bill</a></li>
+        <li><a href="#">Employee Email</a></li>
+      </ul>
+    </div>
+    <a href="#sidr" id="show_menu" class="conceal"><img src="//d3bx2wzktj6bct.cloudfront.net/assets/icons/menu.png"></a>
+  </div>
+  <div class="banner-links">
+    <div class="constrain">
+      <div class="sub-nav reveal">
+        <ul>
+          <li><a href="#">Government</a></li>
+          <li><a href="#">Job Openings</a></li>
+          <li><a href="#">News</a></li>
+          <li><a href="#">Forms</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="mobile_show_link above conceal">
+        <a href="#" id="show_banner_links">Show Menu</a>
+      </div>
+      <div class="grid-row reveal">
+        <div class="unit unit1of5"><a href="/leadership">
+            <img src="//d3bx2wzktj6bct.cloudfront.net/assets/icons/leadership.png" alt="" class="icon">
+            <h3>Leadership</h3>
+          </a></div>
+        <div class="unit unit1of5"><a href="/departments">
+            <img src="//d3bx2wzktj6bct.cloudfront.net/assets/icons/departments.png" alt="" class="icon">
+            <h3>Departments</h3>
+          </a></div>
+        <div class="unit unit1of5"><a href="/visitors">
+            <img src="//d3bx2wzktj6bct.cloudfront.net/assets/icons/visitors.png" alt="" class="icon">
+            <h3>Visitors</h3>
+          </a></div>
+        <div class="unit unit1of5"><a href="/residents">
+            <img src="//d3bx2wzktj6bct.cloudfront.net/assets/icons/residents.png" alt="" class="icon">
+            <h3>Residents</h3>
+          </a></div>
+        <div class="unit unit1of5"><a href="/retailers">
+            <img src="//d3bx2wzktj6bct.cloudfront.net/assets/icons/retailers.png" alt="" class="icon">
+            <h3>Retailers</h3>
+          </a></div>
+      </div>
+    </div>
+  </div>
+  <div class="search-bar">
+    <div class="grid-row constrain">
+      <div class="unit unit1of2">
+        <div class="breadcrumbs">
+          You are here: <span>Departments > Business Licenses</span>
+        </div>
+      </div>
+      <div class="unit unit1of2">
+        <form action="/search" id="search">
+          <input type="text" placeholder="Enter Keywords">
+          <input type="submit" value="Search" class="btn">
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="sidr" style="display:none;">
+  <div class="nav">
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="#">Agenda Minutes</a></li>
+      <li><a href="#">Public Notices</a></li>
+      <li><a href="#">Water Bill</a></li>
+      <li><a href="#">Employee Email</a></li>
+      <li><a href="#">Mayor</a></li>
+      <li><a href="#">City Council</a></li>
+      <li><a href="#">City Administrator</a></li>
+      <li><a href="#">Government</a></li>
+      <li><a href="#">Job Openings</a></li>
+      <li><a href="#">News</a></li>
+      <li><a href="#">Forms</a></li>
+      <li><a href="#">Contact Us</a></li>
+      <% Caboose::Page.where(:parent_id => 1, :hide => false).where("id != ?", 2).where("id != ?", 3).order(:sort_order).all.each do |p| %>
+        <li><a href="/<%= p.uri %>"><%= p.title %></a></li>
+      <% end %>
+    </ul>
+  </div>
+</div>

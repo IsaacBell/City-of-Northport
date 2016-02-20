@@ -1,0 +1,53 @@
+<div id="block_<%= block.id %>">
+  <!-- TODO: fill out anchors -->
+  <div class="header main">
+    <div class="constrain">
+
+      <div class="left conceal">
+        <a href="/"><h1>The City Of Northport</h1></a>
+      </div>
+
+      <div class="left reveal">
+        <ul>
+          <li><a href="#">Pay My Water Bill</a></li>
+          <li><a href="https://mail.cityofnorthport.org/owa">Employee Email</a></li>
+        </ul>
+      </div>
+
+      <div class="right reveal">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="#">Agenda Minutes</a></li>
+          <li><a href="#">Public Notices</a></li>
+        </ul>
+      </div>
+
+      <a href="#sidr" id="show_menu" class="conceal"><img src="//d3bx2wzktj6bct.cloudfront.net/assets/icons/menu.png"></a>
+
+    </div>
+  </div>
+  <div id="sidr" style="display:none;">
+    <div class="nav">
+      <ul>
+        <%# these links are always here %>
+          <li><a href="/">Home</a></li>
+          <li><a href="#">Agenda Minutes</a></li>
+          <li><a href="#">Public Notices</a></li>
+          <li><a href="#">Water Bill</a></li>
+          <li><a href="#">Employee Email</a></li>
+          <li><a href="#">Mayor</a></li>
+          <li><a href="#">City Council</a></li>
+          <li><a href="#">City Administrator</a></li>
+          <li><a href="#">Government</a></li>
+          <li><a href="#">Job Openings</a></li>
+          <li><a href="#">News</a></li>
+          <li><a href="#">Forms</a></li>
+          <li><a href="#">Contact Us</a></li>
+        <% Caboose::Page.where(:parent_id => 1, :hide => false).where("id != ?", 2).where("id != ?", 3).order(:sort_order).all.each do |p| %>
+          <li><a href="/<%= p.uri %>"><%= p.title %></a></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+
+</div>

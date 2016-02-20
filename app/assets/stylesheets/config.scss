@@ -1,0 +1,76 @@
+// Size
+$max-width:           1100px;
+$body-bg-color:       #eeeff0;
+
+$break-small:         550px;
+$break-medium:        800px;
+$break-large:         1100px;
+
+
+// Color
+$color-black: #000;
+$color-white: #fff;
+$color-light: #ccc; 
+$color-dark: #464646; 
+
+$color-main: #e24b42; 
+$color-alt:  #42a0e2; 
+$color-highlight: #e54d42;
+$color-blue: #596063;
+
+// Typography
+$font-size:           16px;
+
+$font-main:           normal $font-size "Avenir", Arial, sans-serif;
+$font-default:        "Avenir", sans-serif; 
+$font-alt:            normal $font-size "Josefin Slab", Times, serif;
+$font-arvo:           normal $font-size "Arvo", Arial, sans-serif;
+
+
+// Headings
+$heading-font:        $font-arvo;
+$heading-weight:      normal; // bold || normal || 300
+
+
+// Header
+$header-height:       auto;
+$header-bg-color:     #fff;
+$header-nav-lined:    "false"; // "true" || "false"
+$header-font-color:   $color-main;
+
+// Sidebar 
+$sidebar-bg-color:    $color-alt;
+$sidebar-font-color:  #fff;
+$sidebar-icon-color:  $color-alt; 
+
+// Footer
+$footer-height:       auto;
+$footer-bg-color:     $color-main;
+$footer-nav-lined:    "true"; // "true" || "false"
+$footer-font-color:   #fff;
+
+
+// Buttons
+$btn-border-radius:   0;
+$btn-border-width:    0;    // 0 for no border
+$btn-border-color:    shade($color-main, 10%);
+$btn-bg-color:        $color-alt;
+$btn-font-color:      #fff;
+$btn-font:            $font-alt;
+$btn-font-size:       20px;
+$btn-font-weight:     600; // bold || normal
+$btn-font-case:       uppercase;   // none || uppercase || lowercase || capitalize
+$btn-border-side:     "none"; // "all" || "bottom" || "horizontal" || "vertical" || "left" || "right" || "top" || "none"
+
+
+// Inputs
+$input-border-radius:   0;
+$input-bg-color:        #eeeff0;
+$input-border-color:    $color-light;
+$input-border-width:    0; // 0 for no border
+$input-font:            $font-alt;
+$input-font-color:      #8a8a8a;
+$input-font-size:       20px;
+
+
+

@@ -1,0 +1,106 @@
+.footer.main {
+  .photo-bar {
+    width: 100%; 
+    height: 120px;
+    @include bgcover("//d3bx2wzktj6bct.cloudfront.net/assets/footer_photos.jpg"); 
+    border-bottom: 1px solid $color-white;
+    .top-border {
+      background-image: url("//d3bx2wzktj6bct.cloudfront.net/assets/icons/red_border.png"); 
+      width: 100%; 
+      height: 11px;
+    }
+  }
+  .bottom {
+    padding: 30px 0; 
+    background: #2e3e4f; 
+    color: #c9c9c9; 
+    font-family: "Aller", sans-serif;
+    font-weight: 300; 
+    font-size: 14px;
+    line-height: 18px;
+    h5 {
+      color: $color-white;
+    }
+    a {
+      color: #c9c9c9; 
+    }
+    .navigation {
+      width: 100%; 
+      ul {
+        list-style-type: none; 
+        li {
+          padding: 3px 0; 
+          a {
+
+          }
+        }
+      }
+      @include small {
+        text-align: center; 
+        margin: 0 auto 30px auto;
+      }
+      @include big {
+        width: 28%;
+        float: left;
+      }
+    }
+    .get-in-touch {
+      width: 100%; 
+      table {
+        tr {
+          td {
+            padding: 4px; 
+            vertical-align: top;
+            font-weight: 300;
+          }
+        }
+      }
+      @include small {
+        text-align: center; 
+        margin: 5px auto 30px auto;
+        table {
+          margin: 0 auto;
+        }
+      }
+      @include big {
+        width: 36%;
+        float: left;
+      }
+    }
+    .follow {
+      width: 100%; 
+      @include small {
+        margin: 5px auto 30px auto;
+        text-align: center; 
+      }
+      @include big {
+        width: 36%;
+        float: right;
+      }
+      .social {
+        padding-top: 10px;
+        img {
+          width: 30px;
+          height: 30px;
+          margin-right: 5px;
+        }
+      }
+      .nine {
+        width: 180px;
+        margin: 40px auto 0 auto;
+        text-align: center; 
+        p {
+          font-size: 13px;
+          margin-bottom: 5px;
+        }
+        img {
+          max-width: 80px;
+          margin-bottom: 8px;
+          &.caboose {
+            max-width: 40px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,123 @@
+a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.btn {
+  -webkit-border-radius: $btn-border-radius;
+  -moz-border-radius: $btn-border-radius;
+  -ms-border-radius: $btn-border-radius;
+  -o-border-radius: $btn-border-radius;
+  border-radius: $btn-border-radius;
+  background: $btn-bg-color;
+  color: $btn-font-color;
+  font: $btn-font;
+  display: inline-block;
+  font-weight: $btn-font-weight; 
+  padding: 7px 15px 5px 15px;
+  font-size: $btn-font-size;
+  text-decoration: none;
+  text-transform: $btn-font-case;
+  line-height: 25px; 
+  -webkit-appearance: none;
+  text-align: center; 
+  cursor: pointer; 
+  border-width: $btn-border-width;
+
+  @if $btn-border-side == "bottom" {
+    border-bottom: $btn-border-width solid $btn-border-color;
+  }
+  @else if $btn-border-side == "horizontal" {
+    border-left: $btn-border-width solid $btn-border-color;
+    border-right: $btn-border-width solid $btn-border-color;
+  }
+  @else if $btn-border-side == "vertical" {
+    border-top: $btn-border-width solid $btn-border-color;
+    border-bottom: $btn-border-width solid $btn-border-color;
+  }
+  @else if $btn-border-side == "left" {
+    border-left: $btn-border-width solid $btn-border-color;
+  }
+  @else if $btn-border-side == "right" {
+    border-right: $btn-border-width solid $btn-border-color;
+  }
+  @else if $btn-border-side == "top" {
+    border-top: $btn-border-width solid $btn-border-color;
+  }
+  @else if $btn-border-side == "all" {
+    border: $btn-border-width solid $btn-border-color;
+  }
+
+  &:hover {
+    background: shade($btn-bg-color, 10%); 
+    text-decoration: none; 
+    border-color: shade($btn-border-color, 10%); 
+  }
+  &.white {
+    background: #fff;
+    color: $color-main;
+    &:hover {
+      background: $color-main;
+      color: #fff;
+    }
+  }
+  &.white-outline {
+    border: 1px solid #fff;
+    background: none;
+    color: #fff;
+    &:hover {
+      background: $btn-border-color;
+    }
+  }
+  &.color-outline {
+    border: 1px solid $btn-border-color;
+    background: none;
+    color: $btn-border-color;
+    &:hover {
+      background: #fff;
+    }
+  }
+  &.red {
+    background: $color-main;
+    font-family: "Rockwell", serif;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 20px;
+    &:hover {
+      background: #c93d35; 
+    }
+  }
+}
+
+[class^="icon-"] {
+  text-decoration: none;
+  font-size: 40px;
+  &.white {
+    color: #fff; 
+    &:hover {
+      color: $color-main;
+    }
+  }
+  &.colored {
+    color: $color-main;
+    &:hover {
+      color: shade($color-main, 10%); 
+    }
+  }
+}
+
+a[class^="icon-"] {
+  cursor: pointer; 
+  text-decoration: none;
+}
+
+ul.social-links {
+  list-style-type: none;
+  padding: 0; 
+  margin: 0; 
+  li {
+    display: inline-block;
+  }
+}

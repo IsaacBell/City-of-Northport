@@ -1,0 +1,109 @@
+.news-list-block {
+	padding: 50px 0;
+  background: #fff;
+  .news-list-title {
+    @include small {
+    	text-align: center; 
+    }
+  }
+  @include small {
+  	padding: 20px 0 40px 0;
+  }
+  .post-unit {
+  	clear: both;
+  	padding: 10px 1%;
+  	margin-bottom: 10px;
+    background: #fff;
+    &:nth-of-type(even) {
+      background: #f6f6f6;
+    }
+  	&:last-of-type {
+  		margin-bottom: 0; 
+  	}
+    .image-holder {
+      width: 200px;
+      height: 160px;
+      background-size: contain;
+      background-position: center top; 
+      -ms-behavior: url('/bg.htc');
+			background-repeat: no-repeat; 
+      float: left;
+      margin: 0 20px 20px 0;
+      @include small {
+      	float: none; 
+      	margin: 0 auto 20px auto;
+      	background-position: center center; 
+      }
+    }
+    .post-text {
+    	@include small {
+    		text-align: center; 
+    	}
+    	.post-title {
+    		font-size: 1.5em;
+				margin-bottom: 8px;
+    	}
+    	.post-date {
+				font-style: italic;
+				font-size: 0.9em;
+				margin-bottom: 8px;
+				color: tint( $color-dark, 20% ); 
+    	}
+    	.post-excerpt {
+    		
+    	}
+    	.btn {
+				margin-top: 20px;
+    	}
+    }
+  }
+  .page-buttons {
+    padding: 10px 0;
+    margin-top: 20px;
+    .prev {
+      float: left;
+    }
+    .next {
+      float: right;
+    }
+  }
+}
+
+.post-details-wrapper {
+	padding: 50px 0; 
+	@include small {
+		padding: 20px 0 40px 0;
+	}
+	.post-image {
+		display: block;
+		width: 40%;
+		float: left;
+		margin: 0 20px 20px 0;
+		@include small {
+			float: none; 
+			margin: 0 auto 30px auto;
+			max-width: 90%;
+		}
+	}
+	.post-text {
+		.post-title {
+			font-size: 1.6em;
+			margin-bottom: 8px;
+			@include small {
+				text-align: center;
+			}
+		}
+		.post-date {
+			font-size: 0.9em;
+			font-style: italic;
+			margin-bottom: 20px;
+			color: tint( $color-dark, 20% ); 
+			@include small {
+				text-align: center;
+			}
+		}
+		.post-body {
+			padding: 10px 0;
+		}
+	}
+}
